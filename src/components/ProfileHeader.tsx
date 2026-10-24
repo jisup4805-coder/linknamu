@@ -7,7 +7,7 @@ type Props = {
 export default function ProfileHeader({ name, bio, photo }: Props) {
   return (
     <header className="flex flex-col items-center text-center">
-      <div className="h-28 w-28 overflow-hidden rounded-full border-2 border-stone-300 bg-stone-200 dark:border-stone-700 dark:bg-stone-800">
+      <div className="h-[150px] w-[150px] shrink-0 overflow-hidden rounded-full border-4 border-white bg-orange-100 shadow-lg shadow-orange-900/10 dark:border-white/10 dark:bg-stone-800">
         {photo ? (
           // eslint-disable-next-line @next/next/no-img-element
           <img src={photo} alt={`${name} 프로필 사진`} className="h-full w-full object-cover" />
@@ -17,8 +17,8 @@ export default function ProfileHeader({ name, bio, photo }: Props) {
           </div>
         )}
       </div>
-      <h1 className="mt-10 text-xl font-bold">{name}</h1>
-      <p className="mt-1 text-stone-600 dark:text-stone-400">{bio}</p>
+      <h1 className="mt-6 text-2xl font-bold tracking-tight">{name}</h1>
+      <p className="mt-2 text-sm text-stone-500 dark:text-stone-400">{bio}</p>
     </header>
   );
 }
